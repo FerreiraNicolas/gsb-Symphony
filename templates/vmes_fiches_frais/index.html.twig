@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VmesFichesFraisController!{% endblock %}
+
+{% block body %}
+
+        
+        <div>
+    <center><h1>Consulter mes fiche frais</h1>
+        <table>
+            <tr>
+                <th>Id fiche</th>
+                <th>Mois</th>
+                <th> Montant Validé</TH>
+            </tr>
+                
+                    
+   {% for uneFiche in mesFiches %}
+       <tr>
+       <td style="border:4px solid black;">{{ uneFiche.id }}
+       <td style="border:4px solid black;">{{ uneFiche.mois }}
+       <td style="border:4px solid black;">{{ uneFiche.montantValide }}
+       </tr>
+    
+    {% endfor %}
+    
+        </table>
+    </center>
+    </div>
+{% endblock %}
